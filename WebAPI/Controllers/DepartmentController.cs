@@ -20,6 +20,12 @@ namespace WebAPI.Controllers
             _configuration = configuration;
         }
 
+        [HttpGet("Test")]
+        public JsonResult Test() 
+        {
+            return new JsonResult(new { Result = "TEST" });
+        }
+
         [HttpGet]
         public JsonResult Get()
         {
