@@ -26,7 +26,7 @@ jobs:
     - name: Docker build
       run: |
         docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
-        docker build --tag registry.heroku.com/$APP_NAME/web .
+        docker build --file Dockerfile --tag registry.heroku.com/$APP_NAME/web .
     # Push the Docker image to Heroku Container Registry
     - name: Publish
       run: |
